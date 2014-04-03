@@ -1,4 +1,6 @@
-s script serves as the GDAL build step of the
+#!/usr/bin/env bash
+#
+## This script serves as the GDAL build step of the
 # [**GeoDjango Buildpack**](https://github.com/dulaccc/heroku-buildpack-geodjango)
 # compiler.
 #
