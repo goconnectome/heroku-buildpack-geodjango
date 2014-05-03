@@ -208,6 +208,7 @@ bpwatch stop pylibmc_install
 
 bpwatch start geodjango_install
   source $BIN_DIR/steps/geos
+  source $BIN_DIR/steps/geoip
   source $BIN_DIR/steps/proj4
   source $BIN_DIR/steps/gdal
 bpwatch stop geodjango_install
@@ -244,6 +245,8 @@ set-env PATH '$HOME/.heroku/python/bin:$PATH'
 set-env PYTHONUNBUFFERED true
 set-env PYTHONHOME /app/.heroku/python
 set-env GEOS_LIBRARY_PATH $GEOS_LIBRARY_PATH
+set-env GEOIP_LIBRARY_PATH $GEOIP_LIBRARY_PATH
+set-env GEOIP_GEOLITE_CITY_FILE $GEOIP_GEOLITE_CITY_FILE
 set-env PROJ4_LIBRARY_PATH $PROJ4_LIBRARY_PATH
 set-env GDAL_LIBRARY_PATH $GDAL_LIBRARY_PATH
 set-default-env LIBRARY_PATH /app/.heroku/vendor/lib
