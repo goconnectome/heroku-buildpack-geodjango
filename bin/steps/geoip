@@ -35,7 +35,7 @@ make install > /dev/null
 cd $BUILD_DIR
 if [ ! -f $GEOLITECITY_FILE ]; then
     curl -s -L -o ${GEOLITECITY_FILE}.gz $GEOLITECITY_URL
-    gunzip ${GEOLITECITY_FILE}.gz > /dev/null
+    gzip -d ${GEOLITECITY_FILE}.gz > /dev/null
 fi
 export GEOIP_LIBRARY_PATH=$GEOIP_DIST_DIR
 export GEOIP_GEOLITECITY_FILE=$GEOLITECITY_FILE
